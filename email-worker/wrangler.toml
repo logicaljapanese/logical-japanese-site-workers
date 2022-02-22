@@ -1,0 +1,11 @@
+name = "email-worker"
+type = "webpack"
+
+account_id = "977e65c2f9ee04117c281066e34e3327"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-02-22"
+
+[vars]
+SENDGRID_API_ENDPOINT = "https://api.sendgrid.com/v3/mail/send"
