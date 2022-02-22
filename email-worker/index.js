@@ -1,8 +1,10 @@
 import { request } from "http"
 
+const allowedMethods = "POST, OPTIONS";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "GET, HEAD, POST, OPTIONS",
+  "Access-Control-Allow-Methods": allowedMethods,
   "Access-Control-Allow-Headers": "Content-Type",
 }
 
@@ -56,7 +58,7 @@ function handleOptions(request) {
     // Handle standard OPTIONS request.
     return new Response(null, {
       headers: {
-        "Allow": "GET, HEAD, POST, OPTIONS",
+        "Allow": allowedMethods,
       }
     })
   }
